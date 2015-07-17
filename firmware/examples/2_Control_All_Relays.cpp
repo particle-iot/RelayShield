@@ -7,7 +7,6 @@ RelayShield myRelays;
 void setup() {
     //.begin() sets up a couple of things and is necessary to use the rest of the functions
     myRelays.begin();
-    Spark.function()
 }
 
 void loop() {

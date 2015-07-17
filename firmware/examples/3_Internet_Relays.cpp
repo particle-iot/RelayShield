@@ -1,15 +1,18 @@
 // This #include statement was automatically added by the Particle IDE.
-#include "RelayShield.h"
+#include "RelayShield/RelayShield.h"
 
 // Create an instance of the RelayShield library, so we have something to talk to
 RelayShield myRelays;
+
+// Create prototypes of the Spark.functions we'll declare in setup()
 int relayOn(String command);
 int relayOff(String command);
-
 
 void setup() {
     //.begin() sets up a couple of things and is necessary to use the rest of the functions
     myRelays.begin();
+
+    // Register Spark.functions and assign them names
     Spark.function("relayOn", relayOn);
     Spark.function("relayOff", relayOff);
 }
