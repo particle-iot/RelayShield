@@ -11,6 +11,7 @@ class RelayShield {
   
   void
     begin(void),
+    begin(int i),
     on(uint8_t i),
     off(uint8_t i),
     allOn(),

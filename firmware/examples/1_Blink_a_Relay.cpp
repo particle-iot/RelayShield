@@ -1,12 +1,15 @@
 // This #include statement was automatically added by the Particle IDE.
 #include "RelayShield/RelayShield.h"
 
-//Create an instance of the RelayShield library, so we have something to talk to
+// Create an instance of the RelayShield library, so we have something to talk to
 RelayShield myRelays;
 
 void setup() {
-    //.begin() sets up a couple of things and is necessary to use the rest of the functions
+    // .begin() sets up a couple of things and is necessary to use the rest of the functions
     myRelays.begin();
+
+    // Use myRelays.begin(2); if you have the square, white RelayShield (from the Core)
+    // to use, just add a '2' between the parentheses in the code above.
 }
 
 void loop() {

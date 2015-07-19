@@ -1,9 +1,9 @@
 #include "RelayShield.h"
 
-#define relay1 D3
-#define relay2 D4
-#define relay3 D5
-#define relay4 D6
+uint8_t relay1 = 3;
+uint8_t relay2 = 4;
+uint8_t relay3 = 5;
+uint8_t relay4 = 6;
 
 bool relays[5] = {false,false,false,false,false};
 
@@ -12,6 +12,20 @@ RelayShield::RelayShield(){
 }
 
 void RelayShield::begin(){
+    pinMode(relay1, OUTPUT);
+    pinMode(relay2, OUTPUT);
+    pinMode(relay3, OUTPUT);
+    pinMode(relay4, OUTPUT);
+}
+
+void RelayShield::begin(int i){
+    if(i == 2){
+        relay1 = 0;
+        relay2 = 1;
+        relay3 = 2;
+        relay4 = 3;
+    }
+
     pinMode(relay1, OUTPUT);
     pinMode(relay2, OUTPUT);
     pinMode(relay3, OUTPUT);
