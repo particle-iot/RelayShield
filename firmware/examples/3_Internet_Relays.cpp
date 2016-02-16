@@ -16,8 +16,8 @@ void setup() {
     // to use, just add a '2' between the parentheses in the code above.
 
     // Register Spark.functions and assign them names
-    Spark.function("relayOn", relayOn);
-    Spark.function("relayOff", relayOff);
+    Particle.function("relayOn", relayOn);
+    Particle.function("relayOff", relayOff);
 }
 
 void loop() {
